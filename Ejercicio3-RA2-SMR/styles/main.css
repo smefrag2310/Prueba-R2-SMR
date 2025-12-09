@@ -1,0 +1,273 @@
+/* ===== RESET CSS básico ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ESTILOS BASE ===== */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-image: url(../img/Fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* TODO: Alinear el contenido de main, poner colores de fondo, etc. */
+main {
+  width: min(1100px, 90%);
+   margin: 20px auto; 
+   padding: 20px;
+   background-color: #FFE4C4;
+}
+
+/* ===== CABECERA Y MENÚ SUPERIOR ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* TODO: Añade color de fondo, color de texto, padding, etc. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem 2rem;
+  text-align: center;
+  color: goldenrod;
+  background-color:darkolivegreen;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.site-header h1 {
+  font-size: 2.2rem;
+  margin:0;
+  flex: 1;
+  text-align:center;
+  letter-spacing: 2px;
+  /* TODO: Estilo del título (tamaño, margen, etc.) */
+}
+
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  background-color: darkolivegreen;
+  padding: 10px 15px;
+}
+
+.main-nav a:hover{
+  background-color: goldenrod;
+  color: darkolivegreen;
+}
+
+.main-nav a {
+  color: goldenrod;
+  text-decoration:none;
+  padding: 0,5 rem 1 rem;
+  font-weight: 500;
+  border-radius:5px;
+/* TODO: Estilo de enlaces del menú superior (color, padding, :hover, etc.) */
+}
+
+.main-nav li{
+  display:flex;
+  align-items:center;
+}
+
+/* ===== BOTÓN HAMBURGUESA PARA GESTIONAR EL MENÚ LATERAL ===== */
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+  font-size: 26px;
+  /* TODO: Colores, borde, padding, etc. */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto visual cuando el menú está abierto */
+.open-menu.active {
+  transform: rotate(90deg);
+  background-color:darkgrey
+  /* TODO: Cambia color de fondo, rota un poco el icono, etc. */
+}
+
+/* ===== MENÚ LATERAL DESLIZANTE ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -230px;            /* oculto inicialmente */
+  width: 230px;
+  height: 100%;
+  /* TODO: color de fondo, color de texto… */
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 15;
+}
+
+.side-menu.active {
+  left: 0;                 /* aparece cuando tiene la clase "active" */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu a {
+  text-decoration:none;
+  color:yellow;
+  display: block;
+  padding: 12px 20px;
+  /* TODO: color de texto, quitar subrayado, etc. */
+}
+
+section h2{
+  margin:15px 5px;
+  background-color:#8B4513;
+  text-align: center;
+  padding: 10px; 
+  color: white;
+}
+
+section h3{
+  margin:10px 8px;
+  background-color: #B8860B;
+  text-align: center;
+  padding: 8px; 
+  color: white;
+}
+
+section em{
+  color:green;
+  font-weight: bold;
+}
+
+section table th,td{
+  border: 3px solid black;
+  padding: 8px;
+  text-align: center;
+  border-collapse:collapse;
+}
+
+#tabla th{
+  background-color:#CB6C06;
+}
+#tabla tr.par{
+  background-color:#FBC68D;
+}
+
+#form fieldset{
+  border:3px solid #CB6C06;
+  margin:15px;
+  padding:10px;
+  border-radius:8px;
+  background-color:#FBC68D;
+}
+
+#form legend{
+  font-size:1.2em;
+  margin-bottom:10px;
+}
+
+#form label{
+  display:block;
+  margin:8px 0;
+  font-weight: bold;
+}
+
+#form input[type="submit"]{
+  background-color: #CB6C06;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:5px;
+}
+
+#form input[type="reset"]{
+  background-color: #CB6C06;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:5px;
+}
+
+
+section p{
+  text-align: justify;
+  margin: 15px 30px;
+}
+
+section img{
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+ box-shadow: 0px 0px 20px 5px rgba(70, 136, 142, 0.4);
+}
+
+section figure{
+  text-align:center;
+  margin: 10px auto;
+  padding:15px;
+}
+
+section article{
+  padding:5px 5px;
+}
+
+#contacto ul{
+  list-style-type:square;
+  margin:auto;
+  padding:10px 30px;
+}
+
+#contacto ul li{
+  margin: 8px 0;
+}
+
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.imagenes img {
+  flex: 1 1 30%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #CB6C06;
+}
+
+.imagenes img:hover{
+  transform: scale(1.1);
+}
+
+/* TODO: Añade :hover para los enlaces del menú lateral */
+.side-menu a:hover {
+background-color: darkolivegreen;
+color:yellow;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.site-footer {  
+  text-align: center;
+  padding: 20px;
+  background-color: darkolivegreen;
+  color: goldenrod;
+  
+  /* TODO: estilo del footer (color de fondo, texto centrado, padding…) */
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: none;
+  /* TODO: estilo del enlace del footer y :visited si lo deseas */
+}

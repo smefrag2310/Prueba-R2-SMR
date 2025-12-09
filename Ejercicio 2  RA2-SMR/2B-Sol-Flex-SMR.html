@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2B con flex</title>
+<style>
+.site-header {
+  display: flex;
+  justify-items: center; /*Con esto agrupamos todos en un inicio al centro de la web horizontalmente */
+  justify-content: space-around; /*Con space-around dejamos el mismo espacio en los alrededores de todos*/
+  align-items: center; /*Dentro de sus cajas se alinean al centro*/
+  padding: 30px 20px;
+  margin: 10px;
+}
+
+
+h1 {
+  text-align: center;
+  
+}
+.boton{
+    border-left: 3px solid black;
+  border-right:3px solid black;
+  padding: 20px;
+}
+.main-nav{
+    border-left: 3px solid black;
+  border-right:3px solid black;
+  padding: 20px;
+}
+
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <p id="botón">
+        <input type="button" value="Hola maestro">
+    </p>
+  <h1>Mi Sitio Web</h1>
+
+  <nav class="main-nav">
+      ...
+  </nav>
+</header>
+</body>
+</html>
